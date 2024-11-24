@@ -7,8 +7,10 @@ from config import DBConfig
 import base64
 import sqlite3
 import pandas as pd
+import os
 from typing import List, Dict, Any
 from db_service import DatabaseHandler
+
 
 app = FastAPI(
     title="Image Data API",
@@ -16,9 +18,11 @@ app = FastAPI(
 )
 
 
+
+
 # API Endpoint
 @app.get("/frames/", description="Fetch image frames between depth_min and depth_max with pagination.")
-async def fetch_frames(
+def fetch_frames(
     depth_min: float = Query(..., description="Minimum depth value."),
     depth_max: float = Query(..., description="Maximum depth value."),
     offset: int = Query(0, description="Offset for pagination."),
