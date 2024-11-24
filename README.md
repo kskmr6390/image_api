@@ -37,7 +37,7 @@ This project provides a FastAPI-based solution for processing image data stored 
 Clone this repository to your local machine:
 ```bash
 git clone <repository-url>
-cd <repository-directory>
+cd src
 ```
 
 ###  Step2: Create Virtual env and activate
