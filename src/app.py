@@ -7,6 +7,7 @@ import base64
 import sqlite3
 import pandas as pd
 from typing import List, Dict, Any
+from db_service import DatabaseHandler
 
 app = FastAPI(
     title="Image Data API",
@@ -15,17 +16,17 @@ app = FastAPI(
 
 
 
-class DatabaseHandler:   
-    """Handles database operations."""
-    def __init__(self, db_path: str):
-        self.db_path = db_path
+# class DatabaseHandler:   
+#     """Handles database operations."""
+#     def __init__(self, db_path: str):
+#         self.db_path = db_path
 
-    def execute_query(self, query: str) -> pd.DataFrame:
-        conn = sqlite3.connect(self.db_path)
-        try:
-            return pd.read_sql_query(query, conn)
-        finally:
-            conn.close()
+#     def execute_query(self, query: str) -> pd.DataFrame:
+#         conn = sqlite3.connect(self.db_path)
+#         try:
+#             return pd.read_sql_query(query, conn)
+#         finally:
+#             conn.close()
 
 
 class ImageProcessor:
