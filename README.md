@@ -53,8 +53,12 @@ pip install -r requirements.txt
 
 ```
 
+### Step 4:  Resize images & load data to DB
+```bash
+ python3 resize_images.py
 
-### Step 4: Run the servr run 
+```
+### Step 5: Run the servr run 
 ```bash
  uvicorn app:app --reload
 
