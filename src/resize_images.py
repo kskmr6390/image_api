@@ -2,10 +2,12 @@ import sqlite3
 import numpy as np
 from scipy.ndimage import zoom
 import pandas as pd
+from config import DBConfig, ImageData
+
 
 
 #get data
-file_path = './data/img_data.csv'
+file_path = ImageData.PATH
 df = pd.read_csv(file_path)
     # Display basic information about the dataset to understand the structure
 df.info(), df.head()
@@ -28,7 +30,7 @@ resized_images.columns = [f'pixel_{i+1}' for i in range(150)]
 resized_df = pd.concat([df[['depth']], resized_images], axis=1)
 
 # Step 2: Store resized data in SQLite database
-db_path = '/Users/satyam/Desktop/satyam/data/images.db'
+db_path = DBConfig.PATH
 conn = sqlite3.connect(db_path)
 
 # Save to SQLite
