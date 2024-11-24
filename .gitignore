@@ -1,0 +1,54 @@
+# Created by pytest automatically.
+*
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+
+# Virtual environment
+venv/
+.env/
+
+# Logs
+*.log
+logs/
+
+# Docker files
+*.pid
+docker-compose.override.yml
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Heroku-specific
+*.sqlite3
+*.env
+heroku/
+
+# Python specific
+*.pyo
+*.pyc
+*.pyd
+
+# Coverage reports
+htmlcov/
+.coverage
+*.cover
+*.py,cover
+
+# Pytest cache
+.cache
+
+# Distribution files
+build/
+dist/
+*.egg-info/
+
+# Editor-specific
+.idea/
+.vscode/
+*.swp

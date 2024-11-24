@@ -10,15 +10,16 @@ import pandas as pd
 import os
 from typing import List, Dict, Any
 from db_service import DatabaseHandler
-
+import uvicorn
 
 app = FastAPI(
     title="Image Data API",
     description="API to fetch and process image frames based on depth, with pagination.",
 )
 
-
-
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000)) 
+    uvicorn.run("app:app", host="0.0.0.0", port=port)
 
 # API Endpoint
 @app.get("/frames/", description="Fetch image frames between depth_min and depth_max with pagination.")
