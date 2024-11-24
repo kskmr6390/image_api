@@ -16,19 +16,6 @@ app = FastAPI(
 
 
 
-# class DatabaseHandler:   
-#     """Handles database operations."""
-#     def __init__(self, db_path: str):
-#         self.db_path = db_path
-
-#     def execute_query(self, query: str) -> pd.DataFrame:
-#         conn = sqlite3.connect(self.db_path)
-#         try:
-#             return pd.read_sql_query(query, conn)
-#         finally:
-#             conn.close()
-
-
 class ImageProcessor:
     """Processes image data and converts it to base64."""
     @staticmethod
