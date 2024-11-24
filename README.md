@@ -33,41 +33,48 @@ This project provides a FastAPI-based solution for processing image data stored 
 
 ## Setup and Installation
 
-### Step 1: Clone the Repository
+### Clone the Repository
 Clone this repository to your local machine:
 ```bash
-git clone <repository-url>
-cd src
+git clone https://github.com/kskmr6390/image_api
 ```
 
-###  Step2: Create Virtual env and activate
+### Docker build & run
 
 ```bash
+
+docker build -t image-data-api .
+docker run -p 8000:8000 image-data-api
+```
+
+
+### API Docs Referance
+#### docs refs: http://0.0.0.0:8000/docs
+
+###  Step 1 : Create Virtual env and activate
+
+```bash
+cd src
 python3 -m venv env
 source env/bin/activate
 ```
 
-### Step 3 : Install all requirements
+### Step 2 : Install all requirements
 ```bash
 pip install -r requirements.txt
 
 ```
 
-### Step 4:  Resize images & load data to DB
+### Step 3:  Resize images & load data to DB
 ```bash
  python3 resize_images.py
 
 ```
-### Step 5: Run the servr run 
+### Step 4: Run the servr run 
 ```bash
  uvicorn app:app --reload
 
 ```
-### Docker build & run
-
-```bash
-docker build -t image-data-api .
-docker run -p 8000:8000 image-data-api
 
 
 

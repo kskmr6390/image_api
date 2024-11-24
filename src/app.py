@@ -15,9 +15,9 @@ app = FastAPI(
 
 
 
-class DatabaseHandler:
+class DatabaseHandler:   
     """Handles database operations."""
-    def __init__(self, db_path: str= DBConfig.PATH):
+    def __init__(self, db_path: str):
         self.db_path = db_path
 
     def execute_query(self, query: str) -> pd.DataFrame:
@@ -75,7 +75,7 @@ class FrameService:
         return frames
 
 # Dependency Injection
-db_handler = DatabaseHandler(DB_PATH = DBConfig.PATH)
+db_handler = DatabaseHandler(db_path= DBConfig.PATH)
 image_processor = ImageProcessor()
 frame_service = FrameService(db_handler, image_processor)
 
