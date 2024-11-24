@@ -1,6 +1,20 @@
 
 # Image Data Processing API
 
+## **Live Application**
+
+You can access the deployed API here:  
+[https://images-api-data-processing-57e171f4a71a.herokuapp.com/docs](https://images-api-data-processing-57e171f4a71a.herokuapp.com/docs)
+
+## **API Documentation**
+
+Explore the API endpoints and their details using the following documentation interfaces:
+
+- **Swagger UI:** [https://images-api-data-processing-57e171f4a71a.herokuapp.com/docs](https://images-api-data-processing-57e171f4a71a.herokuapp.com/docs)
+- **ReDoc:** [https://images-api-data-processing-57e171f4a71a.herokuapp.com/redoc](https://images-api-data-processing-57e171f4a71a.herokuapp.com/redoc)
+
+
+
 ## Description
 This project provides a FastAPI-based solution for processing image data stored in a CSV file. It includes the following features:
 - Resizing image data (from 200 pixels wide to 150 pixels wide).
@@ -73,11 +87,6 @@ pip install -r requirements.txt
 ### Step 4: Run the servr run 
 ```bash
  uvicorn app:app --reload
-
-```
-
-
-
 
 
 
